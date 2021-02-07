@@ -12,6 +12,8 @@ export default {
   components: { FromTime },
   computed: {
     currentTime () {
+      this.$store.dispatch('tick');
+
       return this.$store.state.time;
     }
   }

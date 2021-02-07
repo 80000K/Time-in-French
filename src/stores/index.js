@@ -4,8 +4,13 @@ export default function (Vuex) {
       time: new Date()
     },
     mutations: {
-      tick (state) {
+      updateTime (state) {
         state.time = new Date();
+      }
+    },
+    actions: {
+      tick ({ commit }) {
+        setInterval(commit.bind(null, 'updateTime'), 1000);
       }
     }
   });
