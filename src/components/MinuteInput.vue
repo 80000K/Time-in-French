@@ -5,10 +5,9 @@
 <script>
   export default {
     name: 'MinuteInput',
-    props: { time: { type: Number, required: true } },
+    props: { time: { type: Date, required: true } },
     computed: {
       minutes () {
-        // TODO: Validate that this.time is a valid time number
         let datetime = new Date(this.time),
           minutes = datetime.getMinutes(),
           paddedMinutes = (minutes < 10 ? '0' : '') + String(minutes);

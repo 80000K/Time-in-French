@@ -13,7 +13,7 @@
 
   export default {
     name: 'FromTime',
-    props: { startTime: { type: Number, required: true } },
+    props: { startTime: { type: Date, required: true } },
     components: { HourInput, MinuteInput }
   }
 </script>

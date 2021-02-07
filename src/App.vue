@@ -12,7 +12,7 @@ export default {
   components: { FromTime },
   computed: {
     currentTime () {
-      return Date.now();
+      return this.$store.state.time;
     }
   }
 }

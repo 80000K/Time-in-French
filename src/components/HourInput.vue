@@ -5,7 +5,7 @@
 <script>
   export default {
     name: 'HourInput',
-    props: { time: { type: Number, required: true } },
+    props: { time: { type: Date, required: true } },
     computed: {
       hour () {
         // TODO: Validate that this.time is a valid time number
