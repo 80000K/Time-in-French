@@ -1,15 +1,17 @@
 <template>
   <div>
     <FromTime :startTime="currentTime" />
+    <ToTime :time="currentTime" />
   </div>
 </template>
 
 <script>
 import FromTime from './components/FromTime.vue'
+import ToTime from './components/ToTime.vue'
 
 export default {
   name: 'App',
-  components: { FromTime },
+  components: { FromTime, ToTime },
   computed: {
     currentTime () {
       this.$store.dispatch('tick');

@@ -46,6 +46,7 @@
   .from-time {
     font-size: 11vw;
     display: flex;
+    justify-content: center;
   }
 
   .from-time__prefix:after {
