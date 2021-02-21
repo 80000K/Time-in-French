@@ -1,9 +1,9 @@
 <template>
   <div class="from-time">
     <span class='from-time__prefix'>It is </span>
-    <HourInput :time="startTime" />
-    <span class="separator">:</span>
-    <MinuteInput :time="startTime" />
+    <HourInput :time="time" />
+    <span v-bind:class="{ blink: blink }">:</span>
+    <MinuteInput :time="time" />
   </div>
 </template>
 
@@ -13,8 +13,13 @@
 
   export default {
     name: 'FromTime',
-    props: { startTime: { type: Date, required: true } },
-    components: { HourInput, MinuteInput }
+    props: { time: { type: Date, required: true } },
+    components: { HourInput, MinuteInput },
+    computed: {
+      blink () {
+        return this.$store.state.live;
+      }
+    }
   }
 </script>
 
@@ -54,7 +59,7 @@
     display: inline-block;
   }
 
-  .separator {
+  .blink {
     animation: blink-animation 2s steps(15, start) infinite;
     -webkit-animation: blink-animation 2s steps(15, start) infinite;
   }

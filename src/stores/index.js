@@ -1,16 +1,28 @@
 export default function (Vuex) {
   return new Vuex.Store({
     state: {
-      time: new Date()
+      time: new Date(),
+      userTime: undefined,
+      live: true,
+      interval: undefined
     },
     mutations: {
       updateTime (state) {
-        state.time = new Date();
+        if (!state.userTime) {
+          state.time = new Date();
+        }
       }
     },
     actions: {
-      tick ({ commit }) {
-        setInterval(commit.bind(null, 'updateTime'), 1000);
+      tick ({ commit, state }) {
+        if (!state.interval) {
+          state.interval = setInterval(commit.bind(null, 'updateTime'), 1000);
+        }
+
+        if (state.live && state.userTime) {
+          state.live = false;
+          clearInterval(state.interval);
+        }
       }
     }
   });

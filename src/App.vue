@@ -1,7 +1,7 @@
 <template>
   <div>
-    <FromTime :startTime="currentTime" />
-    <ToTime :time="currentTime" />
+    <FromTime :time="time" />
+    <ToTime :time="time" />
   </div>
 </template>
 
@@ -13,10 +13,10 @@ export default {
   name: 'App',
   components: { FromTime, ToTime },
   computed: {
-    currentTime () {
+    time () {
       this.$store.dispatch('tick');
 
-      return this.$store.state.time;
+      return this.$store.state.userTime || this.$store.state.time;
     }
   }
 }

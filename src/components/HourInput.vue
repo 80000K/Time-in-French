@@ -1,18 +1,34 @@
 <template>
-  <div class="hour-input">{{ hour }}</div>
+  <div class="hour-input">
+    <NumberInput
+      :value="hour"
+      :onChange="handleChange"
+    />
+  </div>
 </template>
 
 <script>
+  import NumberInput from './NumberInput';
+
   export default {
     name: 'HourInput',
     props: { time: { type: Date, required: true } },
+    components: { NumberInput },
     computed: {
       hour () {
         let datetime = new Date(this.time),
-          hour = datetime.getHours(),
-          paddedHour = (hour < 10 ? '0' : '') + String(hour);
+          hour = datetime.getHours();
 
-        return paddedHour;
+        return hour;
+      }
+    },
+    methods: {
+      handleChange (value) {
+        let dateTime = this.$store.state.userTime ? new Date(this.$store.state.userTime) : new Date();
+
+        dateTime.setHours(value);
+
+        this.$store.state.userTime = dateTime;
       }
     }
   }
