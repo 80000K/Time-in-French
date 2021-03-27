@@ -3,6 +3,7 @@
     <NumberInput
       :value="hour"
       :onChange="handleChange"
+      :maxValue="23"
     />
   </div>
 </template>
