@@ -19,7 +19,7 @@
 
 <style scoped>
   .to-time {
-    font-size: 5vw;
+    font-size: 4.5vw;
     display: flex;
     justify-content: center;
   }
