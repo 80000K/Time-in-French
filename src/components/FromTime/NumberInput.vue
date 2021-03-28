@@ -88,7 +88,7 @@
 <style scoped>
   .number-input input {
     all: inherit;
-    width: 12vw;
+    width: 9.4vw;
     text-decoration: underline;
   }
 </style>
