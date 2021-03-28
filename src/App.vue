@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import FromTime from './components/FromTime.vue'
-import ToTime from './components/ToTime.vue'
+import FromTime from './components/FromTime'
+import ToTime from './components/ToTime'
 
 export default {
   name: 'App',
