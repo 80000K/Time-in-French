@@ -50,7 +50,8 @@
 
   .from-time {
     display: flex;
-    font-size: 11vw;
+    font-size: 9vw;
+    margin-bottom: 36px;
     justify-content: center;
     color: var(--highlight-color);
     font-family: "Concert One", sans-serif;
