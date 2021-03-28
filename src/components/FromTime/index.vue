@@ -3,7 +3,7 @@
     <span class='from-time__prefix'>It is </span>
     <HourInput :time="time" />
     <span v-bind:class="{ blink: blink }">:</span>
-    <MinuteInput :time="time" />
+    <MinuteInput :time="time" />.
   </div>
 </template>
 
@@ -49,9 +49,12 @@
   }
 
   .from-time {
-    font-size: 11vw;
     display: flex;
+    font-size: 11vw;
     justify-content: center;
+    color: var(--highlight-color);
+    font-family: "Concert One", sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .from-time__prefix:after {
