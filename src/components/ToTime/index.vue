@@ -1,31 +1,24 @@
 <template>
   <div class="to-time">
-    <span class='to-time__prefix'>Il est </span>
-    <LiteralHour :time="time" />
-    <LiteralMinute :time="time" />.
+    <MilitaryTime :time="time" />
+    <!-- <CivilianTime :time="time" /> -->
+    <!-- <QuarterTime :time="time" /> -->
+    <!-- <ContextualTime :time="time" /> -->
   </div>
 </template>
 
 <script>
-  import LiteralHour from './Literal/LiteralHour.vue';
-  import LiteralMinute from './Literal/LiteralMinute.vue';
+  import MilitaryTime from './MilitaryTime';
 
   export default {
     name: 'ToTime',
     props: { time: { type: Date, required: true } },
-    components: { LiteralHour, LiteralMinute }
+    components: { MilitaryTime }
   }
 </script>
 
 <style scoped>
   .to-time {
     font-size: 3.6vw;
-    display: flex;
-    justify-content: center;
-  }
-
-  .to-time__prefix:after {
-    content: ' ';
-    display: inline-block;
   }
 </style>
