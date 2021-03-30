@@ -1,17 +1,19 @@
 <template>
   <div>
+    <Prompt />
     <FromTime :time="time" />
     <ToTime :time="time" />
   </div>
 </template>
 
 <script>
-import FromTime from './components/FromTime.vue'
-import ToTime from './components/ToTime.vue'
+import FromTime from './components/FromTime'
+import ToTime from './components/ToTime'
+import Prompt from './components/Prompt.vue'
 
 export default {
   name: 'App',
-  components: { FromTime, ToTime },
+  components: { FromTime, ToTime, Prompt },
   computed: {
     time () {
       this.$store.dispatch('tick');
@@ -23,6 +25,12 @@ export default {
 </script>
 
 <style>
+  :root {
+    --background-color: #FFFFFF;  /* Background color for the entire page. */
+    --highlight-color: #000000;   /* Color for elements which stand out. */
+    --content-color: #000000;     /* Color for all normal content on the page. */
+  }
+
   html,
   body {
     height: 100%;
@@ -32,6 +40,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Concert One", sans-serif;
+    color: var(--content-color);
+    font-family: "Roboto", sans-serif;
+    background: var(--background-color);
   }
 </style>

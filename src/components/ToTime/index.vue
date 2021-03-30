@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import LiteralHour from './LiteralHour.vue';
-  import LiteralMinute from './LiteralMinute.vue';
+  import LiteralHour from './Literal/LiteralHour.vue';
+  import LiteralMinute from './Literal/LiteralMinute.vue';
 
   export default {
     name: 'ToTime',
@@ -19,7 +19,7 @@
 
 <style scoped>
   .to-time {
-    font-size: 5vw;
+    font-size: 3.6vw;
     display: flex;
     justify-content: center;
   }
