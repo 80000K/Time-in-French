@@ -26,9 +26,9 @@ export default {
 
 <style>
   :root {
-    --background-color: #2B4AD9;  /* Background color for the entire page. */
-    --highlight-color: #1BD760;   /* Color for elements which stand out. */
-    --content-color: #FFFFFF;     /* Color for all normal content on the page. */
+    --background-color: #FFFFFF;  /* Background color for the entire page. */
+    --highlight-color: #000000;   /* Color for elements which stand out. */
+    --content-color: #000000;     /* Color for all normal content on the page. */
   }
 
   html,
