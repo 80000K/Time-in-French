@@ -22,4 +22,6 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://cli.vuejs.org/config/) to understand how the CLI configuration can be customized.
+
+Application theme colors can be customized in App.vue, under the `:root` styles.
