@@ -1,12 +1,12 @@
 <template>
-  <div class="literal-hour">{{ hourPhrase }}</div>
+  <div class="military-hour">{{ hourPhrase }}</div>
 </template>
 
 <script>
-  const frenchHours = ['zéro', 'une', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf', 'vingt', 'vingt-et-un', 'vingt-deux', 'vingt-trois'];
+  const frenchHours = ['zéro', 'une', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf', 'vingt', 'vingt-et-une', 'vingt-deux', 'vingt-trois'];
 
   export default {
-    name: 'LiteralHour',
+    name: 'MilitaryHour',
     props: { time: { type: Date, required: true } },
     computed: {
       hourPhrase () {
