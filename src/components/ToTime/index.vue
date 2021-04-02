@@ -1,7 +1,7 @@
 <template>
   <div class="to-time">
     <MilitaryTime :time="time" />
-    <!-- <CivilianTime :time="time" /> -->
+    <CivilianTime :time="time" />
     <!-- <QuarterTime :time="time" /> -->
     <!-- <ContextualTime :time="time" /> -->
   </div>
@@ -9,11 +9,12 @@
 
 <script>
   import MilitaryTime from './MilitaryTime';
+  import CivilianTime from './CivilianTime';
 
   export default {
     name: 'ToTime',
     props: { time: { type: Date, required: true } },
-    components: { MilitaryTime }
+    components: { MilitaryTime, CivilianTime }
   }
 </script>
 
