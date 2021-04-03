@@ -1,5 +1,5 @@
 <template>
-  <div class="civilian-hour">{{ hourPhrase }}</div>
+  <div class="quarter-hour">{{ hourPhrase }}</div>
 </template>
 
 <script>
@@ -28,10 +28,11 @@
     'neuf',
     'dix',
     'onze',
+    'douze'
   ];
 
   export default {
-    name: 'CivilianHour',
+    name: 'QuarterHour',
     props: { time: { type: Date, required: true } },
     computed: {
       hourPhrase () {
@@ -42,6 +43,10 @@
 
         if ([0, 12].includes(hour) && minutes === 0) {
           return '';
+        }
+
+        if (minutes > 30) {
+          hour += 1;
         }
 
         return `${frenchHours[hour]} ${suffix}`;
