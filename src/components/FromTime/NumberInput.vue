@@ -110,14 +110,9 @@
 <style scoped>
   .number-input div {
     width: 10vw;
-    overflow: hidden;
     position: relative;
     word-break: keep-all;
     text-decoration: underline;
-
-    /* For Safari compatibility, to immediately show the cursor on focus */
-    -webkit-user-select: text;
-    user-select: text;
   }
 
   .number-input div:focus {
