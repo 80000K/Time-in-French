@@ -35,4 +35,8 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped>
+  .minute-input {
+    border: solid 3px blue;
+  }
+</style>

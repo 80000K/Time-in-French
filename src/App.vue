@@ -1,22 +1,15 @@
 <template>
   <div>
-    <Prompt />
     <FromTime :time="time" />
-    <ToTime :time="time" />
-
-    <Footer />
   </div>
 </template>
 
 <script>
 import FromTime from './components/FromTime'
-import ToTime from './components/ToTime'
-import Prompt from './components/Prompt.vue'
-import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
-  components: { FromTime, ToTime, Prompt, Footer },
+  components: { FromTime },
   computed: {
     time () {
       this.$store.dispatch('tick');

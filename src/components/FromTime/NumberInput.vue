@@ -108,12 +108,20 @@
 </script>
 
 <style scoped>
+  .number-input {
+    border: solid 3px lime;
+    margin: 2px;
+  }
+
   .number-input div {
     width: 10vw;
     overflow: hidden;
     position: relative;
     word-break: keep-all;
     text-decoration: underline;
+
+    margin: 2px;
+    border: solid 3px orange;
 
     /* For Safari compatibility, to immediately show the cursor on focus */
     -webkit-user-select: text;

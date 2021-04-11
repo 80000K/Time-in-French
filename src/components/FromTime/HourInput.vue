@@ -35,4 +35,8 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped>
+  .hour-input {
+    border: solid 3px red;
+  }
+</style>
