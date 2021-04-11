@@ -115,7 +115,7 @@
 
   .number-input div {
     width: 10vw;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     word-break: keep-all;
     text-decoration: underline;
@@ -124,8 +124,8 @@
     border: solid 3px orange;
 
     /* For Safari compatibility, to immediately show the cursor on focus */
-    -webkit-user-select: text;
-    user-select: text;
+    /*-webkit-user-select: text;*/
+    /*user-select: text;*/
   }
 
   .number-input div:focus {

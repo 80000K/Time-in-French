@@ -1,9 +1,25 @@
 <template>
-  <div class="from-time">
-    <span class='from-time__prefix'>It is </span>
-    <HourInput :time="time" />
-    <span v-bind:class="{ blink: blink }">:</span>
-    <MinuteInput :time="time" />.
+  <div>
+    <div class="from-time">
+      <span class='from-time__prefix'>1. It is </span>
+      <HourInput :time="time" />
+      <span v-bind:class="{ blink: blink }">:</span>
+      <MinuteInput :time="time" />.
+    </div>
+
+    <div class="from-time from-time--alt-one">
+      <span class='from-time__prefix'>2. It is </span>
+      <HourInput :time="time" />
+      <span v-bind:class="{ blink: blink }">:</span>
+      <MinuteInput :time="time" />.
+    </div>
+
+    <div class="from-time from-time--alt-two">
+      <span class='from-time__prefix'>3. It is </span>
+      <HourInput :time="time" />
+      <span v-bind:class="{ blink: blink }">:</span>
+      <MinuteInput :time="time" />.
+    </div>
   </div>
 </template>
 
@@ -66,5 +82,13 @@
   .blink {
     animation: blink-animation 2s steps(15, start) infinite;
     -webkit-animation: blink-animation 2s steps(15, start) infinite;
+  }
+
+  .from-time--alt-one .number-input div {
+    overflow: hidden;
+  }
+
+  .from-time--alt-two {
+    align-items: stretch;
   }
 </style>
