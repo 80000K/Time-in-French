@@ -1,5 +1,6 @@
-# fromage
+# Learn Time
 Time in French, since 1982.
+www.timeinfrench.xyz
 
 ## Project setup
 ```
